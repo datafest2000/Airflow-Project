@@ -1,0 +1,57 @@
+[2024-04-17T15:37:46.405+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: KingFX1_ETL.Extract_Response scheduled__2024-04-16T00:00:00+00:00 [queued]>
+[2024-04-17T15:37:46.413+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: KingFX1_ETL.Extract_Response scheduled__2024-04-16T00:00:00+00:00 [queued]>
+[2024-04-17T15:37:46.414+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 0
+[2024-04-17T15:37:46.430+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): Extract_Response> on 2024-04-16 00:00:00+00:00
+[2024-04-17T15:37:46.435+0000] {standard_task_runner.py:60} INFO - Started process 57 to run task
+[2024-04-17T15:37:46.439+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'KingFX1_ETL', 'Extract_Response', 'scheduled__2024-04-16T00:00:00+00:00', '--job-id', '169', '--raw', '--subdir', 'DAGS_FOLDER/include/fx_dag.py', '--cfg-path', '/tmp/tmpudhdlvr2']
+[2024-04-17T15:37:46.442+0000] {standard_task_runner.py:88} INFO - Job 169: Subtask Extract_Response
+[2024-04-17T15:37:46.495+0000] {task_command.py:423} INFO - Running <TaskInstance: KingFX1_ETL.Extract_Response scheduled__2024-04-16T00:00:00+00:00 [running]> on host 65f2ce3f86e2
+[2024-04-17T15:37:46.575+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='kresthill' AIRFLOW_CTX_DAG_ID='KingFX1_ETL' AIRFLOW_CTX_TASK_ID='Extract_Response' AIRFLOW_CTX_EXECUTION_DATE='2024-04-16T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-16T00:00:00+00:00'
+[2024-04-17T15:37:46.578+0000] {logging_mixin.py:188} INFO - datascope1000723960447 tfa78vt86qrdcgqfs5m9asp2b4
+[2024-04-17T15:37:47.918+0000] {logging_mixin.py:188} INFO - {'terms': 'https://www.xe.com/legal/', 'privacy': 'http://www.xe.com/privacy.php', 'from': 'USD', 'amount': 1.0, 'timestamp': '2024-04-17T00:00:00Z', 'to': [{'quotecurrency': 'EGP', 'mid': 48.5071048978}, {'quotecurrency': 'GHS', 'mid': 13.4455255211}, {'quotecurrency': 'KES', 'mid': 131.82846153}, {'quotecurrency': 'MAD', 'mid': 10.1652255079}, {'quotecurrency': 'NGN', 'mid': 1138.9651767834}, {'quotecurrency': 'UGX', 'mid': 3834.1235672434}, {'quotecurrency': 'XOF', 'mid': 617.6130264438}]}
+[2024-04-17T15:37:47.919+0000] {logging_mixin.py:188} INFO - successfully extracted data
+[2024-04-17T15:37:47.920+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-04-17T15:37:47.929+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=KingFX1_ETL, task_id=Extract_Response, execution_date=20240416T000000, start_date=20240417T153746, end_date=20240417T153747
+[2024-04-17T15:37:47.983+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-17T15:37:47.997+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/models/baseoperator.py:1201: AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+  result = cls.__new__(cls)
+
+[2024-04-17T15:37:48.016+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-04-17T16:52:22.844+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: KingFX1_ETL.Extract_Response scheduled__2024-04-16T00:00:00+00:00 [queued]>
+[2024-04-17T16:52:22.857+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: KingFX1_ETL.Extract_Response scheduled__2024-04-16T00:00:00+00:00 [queued]>
+[2024-04-17T16:52:22.858+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 0
+[2024-04-17T16:52:22.874+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): Extract_Response> on 2024-04-16 00:00:00+00:00
+[2024-04-17T16:52:22.879+0000] {standard_task_runner.py:60} INFO - Started process 1213 to run task
+[2024-04-17T16:52:22.884+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'KingFX1_ETL', 'Extract_Response', 'scheduled__2024-04-16T00:00:00+00:00', '--job-id', '182', '--raw', '--subdir', 'DAGS_FOLDER/include/fx_dag.py', '--cfg-path', '/tmp/tmp0vglq3ph']
+[2024-04-17T16:52:22.889+0000] {standard_task_runner.py:88} INFO - Job 182: Subtask Extract_Response
+[2024-04-17T16:52:22.952+0000] {task_command.py:423} INFO - Running <TaskInstance: KingFX1_ETL.Extract_Response scheduled__2024-04-16T00:00:00+00:00 [running]> on host 65f2ce3f86e2
+[2024-04-17T16:52:23.045+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='kresthill' AIRFLOW_CTX_DAG_ID='KingFX1_ETL' AIRFLOW_CTX_TASK_ID='Extract_Response' AIRFLOW_CTX_EXECUTION_DATE='2024-04-16T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-16T00:00:00+00:00'
+[2024-04-17T16:52:23.047+0000] {logging_mixin.py:188} INFO - datascope1000723960447 tfa78vt86qrdcgqfs5m9asp2b4
+[2024-04-17T16:52:24.367+0000] {logging_mixin.py:188} INFO - {'terms': 'https://www.xe.com/legal/', 'privacy': 'http://www.xe.com/privacy.php', 'from': 'USD', 'amount': 1.0, 'timestamp': '2024-04-17T00:00:00Z', 'to': [{'quotecurrency': 'EGP', 'mid': 48.5071048978}, {'quotecurrency': 'GHS', 'mid': 13.4455255211}, {'quotecurrency': 'KES', 'mid': 131.82846153}, {'quotecurrency': 'MAD', 'mid': 10.1652255079}, {'quotecurrency': 'NGN', 'mid': 1138.9651767834}, {'quotecurrency': 'UGX', 'mid': 3834.1235672434}, {'quotecurrency': 'XOF', 'mid': 617.6130264438}]}
+[2024-04-17T16:52:24.368+0000] {logging_mixin.py:188} INFO - successfully extracted data
+[2024-04-17T16:52:24.369+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-04-17T16:52:24.378+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=KingFX1_ETL, task_id=Extract_Response, execution_date=20240416T000000, start_date=20240417T165222, end_date=20240417T165224
+[2024-04-17T16:52:24.428+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-17T16:52:24.440+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/models/baseoperator.py:1201: AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+  result = cls.__new__(cls)
+
+[2024-04-17T16:52:24.459+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-04-17T23:49:36.612+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: KingFX1_ETL.Extract_Response scheduled__2024-04-16T00:00:00+00:00 [queued]>
+[2024-04-17T23:49:36.624+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: KingFX1_ETL.Extract_Response scheduled__2024-04-16T00:00:00+00:00 [queued]>
+[2024-04-17T23:49:36.624+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 0
+[2024-04-17T23:49:36.639+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): Extract_Response> on 2024-04-16 00:00:00+00:00
+[2024-04-17T23:49:36.645+0000] {standard_task_runner.py:60} INFO - Started process 2755 to run task
+[2024-04-17T23:49:36.649+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'KingFX1_ETL', 'Extract_Response', 'scheduled__2024-04-16T00:00:00+00:00', '--job-id', '189', '--raw', '--subdir', 'DAGS_FOLDER/include/fx_dag.py', '--cfg-path', '/tmp/tmpfbzv6oq5']
+[2024-04-17T23:49:36.652+0000] {standard_task_runner.py:88} INFO - Job 189: Subtask Extract_Response
+[2024-04-17T23:49:36.707+0000] {task_command.py:423} INFO - Running <TaskInstance: KingFX1_ETL.Extract_Response scheduled__2024-04-16T00:00:00+00:00 [running]> on host 65f2ce3f86e2
+[2024-04-17T23:49:36.790+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='kresthill' AIRFLOW_CTX_DAG_ID='KingFX1_ETL' AIRFLOW_CTX_TASK_ID='Extract_Response' AIRFLOW_CTX_EXECUTION_DATE='2024-04-16T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-16T00:00:00+00:00'
+[2024-04-17T23:49:36.792+0000] {logging_mixin.py:188} INFO - datascope1000723960447 tfa78vt86qrdcgqfs5m9asp2b4
+[2024-04-17T23:49:38.326+0000] {logging_mixin.py:188} INFO - {'terms': 'https://www.xe.com/legal/', 'privacy': 'http://www.xe.com/privacy.php', 'from': 'USD', 'amount': 1.0, 'timestamp': '2024-04-17T00:00:00Z', 'to': [{'quotecurrency': 'EGP', 'mid': 48.5071048978}, {'quotecurrency': 'GHS', 'mid': 13.4455255211}, {'quotecurrency': 'KES', 'mid': 131.82846153}, {'quotecurrency': 'MAD', 'mid': 10.1652255079}, {'quotecurrency': 'NGN', 'mid': 1138.9651767834}, {'quotecurrency': 'UGX', 'mid': 3834.1235672434}, {'quotecurrency': 'XOF', 'mid': 617.6130264438}]}
+[2024-04-17T23:49:38.328+0000] {logging_mixin.py:188} INFO - successfully extracted data
+[2024-04-17T23:49:38.329+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-04-17T23:49:38.340+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=KingFX1_ETL, task_id=Extract_Response, execution_date=20240416T000000, start_date=20240417T234936, end_date=20240417T234938
+[2024-04-17T23:49:38.391+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-17T23:49:38.405+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/models/baseoperator.py:1201: AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+  result = cls.__new__(cls)
+
+[2024-04-17T23:49:38.425+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

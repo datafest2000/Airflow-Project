@@ -1,0 +1,13 @@
+[2024-04-13T00:23:10.046+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: KingFX1_ETL.Transform_response manual__2024-04-13T00:23:04.759620+00:00 [queued]>
+[2024-04-13T00:23:10.055+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: KingFX1_ETL.Transform_response manual__2024-04-13T00:23:04.759620+00:00 [queued]>
+[2024-04-13T00:23:10.056+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-13T00:23:10.072+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): Transform_response> on 2024-04-13 00:23:04.759620+00:00
+[2024-04-13T00:23:10.076+0000] {standard_task_runner.py:60} INFO - Started process 4459 to run task
+[2024-04-13T00:23:10.079+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'KingFX1_ETL', 'Transform_response', 'manual__2024-04-13T00:23:04.759620+00:00', '--job-id', '90', '--raw', '--subdir', 'DAGS_FOLDER/include/fx_dag.py', '--cfg-path', '/tmp/tmpafsm2vk0']
+[2024-04-13T00:23:10.082+0000] {standard_task_runner.py:88} INFO - Job 90: Subtask Transform_response
+[2024-04-13T00:23:10.129+0000] {task_command.py:423} INFO - Running <TaskInstance: KingFX1_ETL.Transform_response manual__2024-04-13T00:23:04.759620+00:00 [running]> on host 65f2ce3f86e2
+[2024-04-13T00:23:10.202+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='KingFX1_ETL' AIRFLOW_CTX_TASK_ID='Transform_response' AIRFLOW_CTX_EXECUTION_DATE='2024-04-13T00:23:04.759620+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-13T00:23:04.759620+00:00'
+[2024-04-13T00:23:10.204+0000] {logging_mixin.py:188} INFO - {'terms': 'https://www.xe.com/legal/', 'privacy': 'http://www.xe.com/privacy.php', 'from': 'USD', 'amount': 1.0, 'timestamp': '2024-04-13T00:00:00Z', 'to': [{'quotecurrency': 'EGP', 'mid': 47.4832093205}, {'quotecurrency': 'GHS', 'mid': 13.3965352924}, {'quotecurrency': 'KES', 'mid': 129.9157757938}, {'quotecurrency': 'MAD', 'mid': 10.0194953117}, {'quotecurrency': 'NGN', 'mid': 1200.4954199097}, {'quotecurrency': 'UGX', 'mid': 3807.0692791395}, {'quotecurrency': 'XOF', 'mid': 615.4439079756}]}
+[2024-04-13T00:23:10.239+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-04-13T00:23:10.248+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=KingFX1_ETL, task_id=Transform_response, execution_date=20240413T002304, start_date=20240413T002310, end_date=20240413T002310
+[2024-04-13T00:23:10.292+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0

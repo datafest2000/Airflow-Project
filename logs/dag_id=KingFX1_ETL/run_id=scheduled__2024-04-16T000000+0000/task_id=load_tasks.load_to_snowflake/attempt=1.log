@@ -1,0 +1,82 @@
+[2024-04-17T16:52:29.946+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: KingFX1_ETL.load_tasks.load_to_snowflake scheduled__2024-04-16T00:00:00+00:00 [queued]>
+[2024-04-17T16:52:29.956+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: KingFX1_ETL.load_tasks.load_to_snowflake scheduled__2024-04-16T00:00:00+00:00 [queued]>
+[2024-04-17T16:52:29.957+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 0
+[2024-04-17T16:52:29.972+0000] {taskinstance.py:2217} INFO - Executing <Task(SnowflakeOperator): load_tasks.load_to_snowflake> on 2024-04-16 00:00:00+00:00
+[2024-04-17T16:52:29.977+0000] {standard_task_runner.py:60} INFO - Started process 1239 to run task
+[2024-04-17T16:52:29.980+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'KingFX1_ETL', 'load_tasks.load_to_snowflake', 'scheduled__2024-04-16T00:00:00+00:00', '--job-id', '188', '--raw', '--subdir', 'DAGS_FOLDER/include/fx_dag.py', '--cfg-path', '/tmp/tmpbyr83orz']
+[2024-04-17T16:52:29.983+0000] {standard_task_runner.py:88} INFO - Job 188: Subtask load_tasks.load_to_snowflake
+[2024-04-17T16:52:30.042+0000] {task_command.py:423} INFO - Running <TaskInstance: KingFX1_ETL.load_tasks.load_to_snowflake scheduled__2024-04-16T00:00:00+00:00 [running]> on host 65f2ce3f86e2
+[2024-04-17T16:52:30.129+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='kresthill' AIRFLOW_CTX_DAG_ID='KingFX1_ETL' AIRFLOW_CTX_TASK_ID='load_tasks.load_to_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2024-04-16T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-16T00:00:00+00:00'
+[2024-04-17T16:52:30.130+0000] {sql.py:276} INFO - Executing: 
+            COPY INTO rates
+            FROM @~/data.csv
+            FILE_FORMAT=(TYPE=CSV SKIP_HEADER=1)
+            
+[2024-04-17T16:52:30.146+0000] {base.py:83} INFO - Using connection ID 'snowflake_conn' for task execution.
+[2024-04-17T16:52:30.156+0000] {base.py:83} INFO - Using connection ID 'snowflake_conn' for task execution.
+[2024-04-17T16:52:30.157+0000] {connection.py:386} INFO - Snowflake Connector for Python Version: 3.7.1, Python Version: 3.8.19, Platform: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.34
+[2024-04-17T16:52:30.158+0000] {connection.py:1211} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-04-17T16:52:30.892+0000] {cursor.py:1032} INFO - query: [ALTER SESSION SET autocommit=True]
+[2024-04-17T16:52:31.084+0000] {cursor.py:1045} INFO - query execution done
+[2024-04-17T16:52:31.086+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2024-04-17T16:52:31.089+0000] {sql.py:457} INFO - Running statement: COPY INTO rates
+            FROM @~/data.csv
+            FILE_FORMAT=(TYPE=CSV SKIP_HEADER=1), parameters: None
+[2024-04-17T16:52:31.091+0000] {cursor.py:1032} INFO - query: [COPY INTO rates FROM @~/data.csv FILE_FORMAT=(TYPE=CSV SKIP_HEADER=1)]
+[2024-04-17T16:52:31.584+0000] {cursor.py:1045} INFO - query execution done
+[2024-04-17T16:52:31.585+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2024-04-17T16:52:31.586+0000] {sql.py:466} INFO - Rows affected: 1
+[2024-04-17T16:52:31.587+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/providers/snowflake/hooks/snowflake.py:393: AirflowProviderDeprecationWarning: Call to deprecated method _make_common_data_structure. (The `_make_serializable` method is deprecated and support will be removed in a future version of the common.sql provider. Please update the DbApiHook's provider to a version based on common.sql >= 1.9.1.)
+  result = self._make_common_data_structure(handler(cur))  # type: ignore[attr-defined]
+
+[2024-04-17T16:52:31.588+0000] {snowflake.py:402} INFO - Rows affected: 1
+[2024-04-17T16:52:31.588+0000] {snowflake.py:403} INFO - Snowflake query id: 01b3bbb4-0000-dd80-0000-0001958e6151
+[2024-04-17T16:52:31.589+0000] {connection.py:734} INFO - closed
+[2024-04-17T16:52:31.755+0000] {connection.py:740} INFO - No async queries seem to be running, deleting session
+[2024-04-17T16:52:31.976+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=KingFX1_ETL, task_id=load_tasks.load_to_snowflake, execution_date=20240416T000000, start_date=20240417T165229, end_date=20240417T165231
+[2024-04-17T16:52:32.007+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-17T16:52:32.019+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/models/baseoperator.py:1201: AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+  result = cls.__new__(cls)
+
+[2024-04-17T16:52:32.034+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-04-17T23:49:47.649+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: KingFX1_ETL.load_tasks.load_to_snowflake scheduled__2024-04-16T00:00:00+00:00 [queued]>
+[2024-04-17T23:49:47.659+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: KingFX1_ETL.load_tasks.load_to_snowflake scheduled__2024-04-16T00:00:00+00:00 [queued]>
+[2024-04-17T23:49:47.660+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 0
+[2024-04-17T23:49:47.674+0000] {taskinstance.py:2217} INFO - Executing <Task(SnowflakeOperator): load_tasks.load_to_snowflake> on 2024-04-16 00:00:00+00:00
+[2024-04-17T23:49:47.679+0000] {standard_task_runner.py:60} INFO - Started process 2776 to run task
+[2024-04-17T23:49:47.682+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'KingFX1_ETL', 'load_tasks.load_to_snowflake', 'scheduled__2024-04-16T00:00:00+00:00', '--job-id', '196', '--raw', '--subdir', 'DAGS_FOLDER/include/fx_dag.py', '--cfg-path', '/tmp/tmp021htv8v']
+[2024-04-17T23:49:47.685+0000] {standard_task_runner.py:88} INFO - Job 196: Subtask load_tasks.load_to_snowflake
+[2024-04-17T23:49:47.734+0000] {task_command.py:423} INFO - Running <TaskInstance: KingFX1_ETL.load_tasks.load_to_snowflake scheduled__2024-04-16T00:00:00+00:00 [running]> on host 65f2ce3f86e2
+[2024-04-17T23:49:47.805+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='kresthill' AIRFLOW_CTX_DAG_ID='KingFX1_ETL' AIRFLOW_CTX_TASK_ID='load_tasks.load_to_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2024-04-16T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-16T00:00:00+00:00'
+[2024-04-17T23:49:47.807+0000] {sql.py:276} INFO - Executing: 
+            COPY INTO rates
+            FROM @~/data.csv
+            FILE_FORMAT=(TYPE=CSV SKIP_HEADER=1)
+            
+[2024-04-17T23:49:47.817+0000] {base.py:83} INFO - Using connection ID 'snowflake_conn' for task execution.
+[2024-04-17T23:49:47.827+0000] {base.py:83} INFO - Using connection ID 'snowflake_conn' for task execution.
+[2024-04-17T23:49:47.828+0000] {connection.py:386} INFO - Snowflake Connector for Python Version: 3.7.1, Python Version: 3.8.19, Platform: Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.34
+[2024-04-17T23:49:47.829+0000] {connection.py:1211} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-04-17T23:49:48.613+0000] {cursor.py:1032} INFO - query: [ALTER SESSION SET autocommit=True]
+[2024-04-17T23:49:48.812+0000] {cursor.py:1045} INFO - query execution done
+[2024-04-17T23:49:48.815+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2024-04-17T23:49:48.817+0000] {sql.py:457} INFO - Running statement: COPY INTO rates
+            FROM @~/data.csv
+            FILE_FORMAT=(TYPE=CSV SKIP_HEADER=1), parameters: None
+[2024-04-17T23:49:48.818+0000] {cursor.py:1032} INFO - query: [COPY INTO rates FROM @~/data.csv FILE_FORMAT=(TYPE=CSV SKIP_HEADER=1)]
+[2024-04-17T23:49:49.676+0000] {cursor.py:1045} INFO - query execution done
+[2024-04-17T23:49:49.677+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2024-04-17T23:49:49.678+0000] {sql.py:466} INFO - Rows affected: 1
+[2024-04-17T23:49:49.679+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/providers/snowflake/hooks/snowflake.py:393: AirflowProviderDeprecationWarning: Call to deprecated method _make_common_data_structure. (The `_make_serializable` method is deprecated and support will be removed in a future version of the common.sql provider. Please update the DbApiHook's provider to a version based on common.sql >= 1.9.1.)
+  result = self._make_common_data_structure(handler(cur))  # type: ignore[attr-defined]
+
+[2024-04-17T23:49:49.680+0000] {snowflake.py:402} INFO - Rows affected: 1
+[2024-04-17T23:49:49.680+0000] {snowflake.py:403} INFO - Snowflake query id: 01b3bd55-0000-dd80-0000-0001958e61e9
+[2024-04-17T23:49:49.681+0000] {connection.py:734} INFO - closed
+[2024-04-17T23:49:49.837+0000] {connection.py:740} INFO - No async queries seem to be running, deleting session
+[2024-04-17T23:49:50.019+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=KingFX1_ETL, task_id=load_tasks.load_to_snowflake, execution_date=20240416T000000, start_date=20240417T234947, end_date=20240417T234950
+[2024-04-17T23:49:50.074+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-17T23:49:50.085+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/models/baseoperator.py:1201: AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+  result = cls.__new__(cls)
+
+[2024-04-17T23:49:50.094+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

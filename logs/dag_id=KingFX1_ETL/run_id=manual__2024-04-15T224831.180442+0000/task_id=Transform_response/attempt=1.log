@@ -1,0 +1,17 @@
+[2024-04-15T22:48:38.457+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: KingFX1_ETL.Transform_response manual__2024-04-15T22:48:31.180442+00:00 [queued]>
+[2024-04-15T22:48:38.466+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: KingFX1_ETL.Transform_response manual__2024-04-15T22:48:31.180442+00:00 [queued]>
+[2024-04-15T22:48:38.467+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-15T22:48:38.485+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): Transform_response> on 2024-04-15 22:48:31.180442+00:00
+[2024-04-15T22:48:38.491+0000] {standard_task_runner.py:60} INFO - Started process 16949 to run task
+[2024-04-15T22:48:38.494+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'KingFX1_ETL', 'Transform_response', 'manual__2024-04-15T22:48:31.180442+00:00', '--job-id', '112', '--raw', '--subdir', 'DAGS_FOLDER/include/fx_dag.py', '--cfg-path', '/tmp/tmp94ul3yv3']
+[2024-04-15T22:48:38.497+0000] {standard_task_runner.py:88} INFO - Job 112: Subtask Transform_response
+[2024-04-15T22:48:38.555+0000] {task_command.py:423} INFO - Running <TaskInstance: KingFX1_ETL.Transform_response manual__2024-04-15T22:48:31.180442+00:00 [running]> on host 65f2ce3f86e2
+[2024-04-15T22:48:38.652+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='KingFX1_ETL' AIRFLOW_CTX_TASK_ID='Transform_response' AIRFLOW_CTX_EXECUTION_DATE='2024-04-15T22:48:31.180442+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-15T22:48:31.180442+00:00'
+[2024-04-15T22:48:38.655+0000] {logging_mixin.py:188} INFO - {'terms': 'https://www.xe.com/legal/', 'privacy': 'http://www.xe.com/privacy.php', 'from': 'USD', 'amount': 1.0, 'timestamp': '2024-04-15T00:00:00Z', 'to': [{'quotecurrency': 'EGP', 'mid': 47.5475235609}, {'quotecurrency': 'GHS', 'mid': 13.4052863442}, {'quotecurrency': 'KES', 'mid': 129.9178476573}, {'quotecurrency': 'MAD', 'mid': 10.0217613841}, {'quotecurrency': 'NGN', 'mid': 1239.969221375}, {'quotecurrency': 'UGX', 'mid': 3805.5015679682}, {'quotecurrency': 'XOF', 'mid': 616.082413824}]}
+[2024-04-15T22:48:38.673+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-04-15T22:48:38.686+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=KingFX1_ETL, task_id=Transform_response, execution_date=20240415T224831, start_date=20240415T224838, end_date=20240415T224838
+[2024-04-15T22:48:38.707+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-15T22:48:38.719+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/models/baseoperator.py:1201: AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+  result = cls.__new__(cls)
+
+[2024-04-15T22:48:38.740+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

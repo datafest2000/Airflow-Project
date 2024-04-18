@@ -1,0 +1,13 @@
+[2024-04-12T20:23:09.968+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: KingFX_ETL.Extract_Response manual__2024-04-12T20:23:07.525633+00:00 [queued]>
+[2024-04-12T20:23:09.976+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: KingFX_ETL.Extract_Response manual__2024-04-12T20:23:07.525633+00:00 [queued]>
+[2024-04-12T20:23:09.976+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 0
+[2024-04-12T20:23:09.992+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): Extract_Response> on 2024-04-12 20:23:07.525633+00:00
+[2024-04-12T20:23:09.997+0000] {standard_task_runner.py:60} INFO - Started process 740 to run task
+[2024-04-12T20:23:10.001+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'KingFX_ETL', 'Extract_Response', 'manual__2024-04-12T20:23:07.525633+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/include/fx_dag.py', '--cfg-path', '/tmp/tmpix5m6f1p']
+[2024-04-12T20:23:10.004+0000] {standard_task_runner.py:88} INFO - Job 44: Subtask Extract_Response
+[2024-04-12T20:23:10.055+0000] {task_command.py:423} INFO - Running <TaskInstance: KingFX_ETL.Extract_Response manual__2024-04-12T20:23:07.525633+00:00 [running]> on host 65f2ce3f86e2
+[2024-04-12T20:23:10.131+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='kresthill' AIRFLOW_CTX_DAG_ID='KingFX_ETL' AIRFLOW_CTX_TASK_ID='Extract_Response' AIRFLOW_CTX_EXECUTION_DATE='2024-04-12T20:23:07.525633+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-12T20:23:07.525633+00:00'
+[2024-04-12T20:23:12.532+0000] {logging_mixin.py:188} INFO - {'code': 1, 'message': 'Bad credentials', 'documentation_url': 'https://xecdapi.xe.com/docs/v1/'}
+[2024-04-12T20:23:12.536+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-04-12T20:23:12.557+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=KingFX_ETL, task_id=Extract_Response, execution_date=20240412T202307, start_date=20240412T202309, end_date=20240412T202312
+[2024-04-12T20:23:12.596+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0

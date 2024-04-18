@@ -1,0 +1,50 @@
+[2024-04-13T00:00:06.314+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: KingFX1_ETL.Transform_response scheduled__2024-04-12T00:00:00+00:00 [queued]>
+[2024-04-13T00:00:06.322+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: KingFX1_ETL.Transform_response scheduled__2024-04-12T00:00:00+00:00 [queued]>
+[2024-04-13T00:00:06.323+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-13T00:00:06.337+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): Transform_response> on 2024-04-12 00:00:00+00:00
+[2024-04-13T00:00:06.346+0000] {standard_task_runner.py:60} INFO - Started process 4084 to run task
+[2024-04-13T00:00:06.351+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'KingFX1_ETL', 'Transform_response', 'scheduled__2024-04-12T00:00:00+00:00', '--job-id', '80', '--raw', '--subdir', 'DAGS_FOLDER/include/fx_dag.py', '--cfg-path', '/tmp/tmpvvd_lwlo']
+[2024-04-13T00:00:06.355+0000] {standard_task_runner.py:88} INFO - Job 80: Subtask Transform_response
+[2024-04-13T00:00:06.420+0000] {task_command.py:423} INFO - Running <TaskInstance: KingFX1_ETL.Transform_response scheduled__2024-04-12T00:00:00+00:00 [running]> on host 65f2ce3f86e2
+[2024-04-13T00:00:06.493+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='KingFX1_ETL' AIRFLOW_CTX_TASK_ID='Transform_response' AIRFLOW_CTX_EXECUTION_DATE='2024-04-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-12T00:00:00+00:00'
+[2024-04-13T00:00:06.494+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/include/transform.py", line 13, in transform_data
+    timestamp = response['timestamp']
+KeyError: 'timestamp'
+[2024-04-13T00:00:06.506+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=KingFX1_ETL, task_id=Transform_response, execution_date=20240412T000000, start_date=20240413T000006, end_date=20240413T000006
+[2024-04-13T00:00:06.517+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 80 for task Transform_response ('timestamp'; 4084)
+[2024-04-13T00:00:06.530+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-13T00:11:44.925+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: KingFX1_ETL.Transform_response scheduled__2024-04-12T00:00:00+00:00 [queued]>
+[2024-04-13T00:11:44.935+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: KingFX1_ETL.Transform_response scheduled__2024-04-12T00:00:00+00:00 [queued]>
+[2024-04-13T00:11:44.935+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-13T00:11:44.949+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): Transform_response> on 2024-04-12 00:00:00+00:00
+[2024-04-13T00:11:44.954+0000] {standard_task_runner.py:60} INFO - Started process 4272 to run task
+[2024-04-13T00:11:44.958+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'KingFX1_ETL', 'Transform_response', 'scheduled__2024-04-12T00:00:00+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/include/fx_dag.py', '--cfg-path', '/tmp/tmp7gvwaml1']
+[2024-04-13T00:11:44.961+0000] {standard_task_runner.py:88} INFO - Job 84: Subtask Transform_response
+[2024-04-13T00:11:45.016+0000] {task_command.py:423} INFO - Running <TaskInstance: KingFX1_ETL.Transform_response scheduled__2024-04-12T00:00:00+00:00 [running]> on host 65f2ce3f86e2
+[2024-04-13T00:11:45.090+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='KingFX1_ETL' AIRFLOW_CTX_TASK_ID='Transform_response' AIRFLOW_CTX_EXECUTION_DATE='2024-04-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-12T00:00:00+00:00'
+[2024-04-13T00:11:45.091+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/include/transform.py", line 13, in transform_data
+    timestamp = response['timestamp']
+KeyError: 'timestamp'
+[2024-04-13T00:11:45.105+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=KingFX1_ETL, task_id=Transform_response, execution_date=20240412T000000, start_date=20240413T001144, end_date=20240413T001145
+[2024-04-13T00:11:45.117+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 84 for task Transform_response ('timestamp'; 4272)
+[2024-04-13T00:11:45.132+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
